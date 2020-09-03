@@ -1,23 +1,34 @@
-var ball = document.getElementById("cottonball");
-var image = document.getElementById("cottonball");
-var smoke = document.getElementById("smoke");
-function burn() {
-  //if (ball.classList != "animate") {
-    //image.src = "ball2.png";
-   // ball.classList.add("animate");
-    image.style.display = "block";
+var character = document.getElementById("character");
+var block = document.getElementById("block");
+var image = document.getElementById("penguin");
 
- // }
+function jump() {
+    if(character.classList != "animate"){
+        
+        image.src = "penguin2.png";
+        character.classList.add("animate");
+        
+    }
+    setTimeout(function(){
+        character.classList.remove("animate");
+        image.src = "penguin.png";
 
- setTimeout(function () {
-      smoke.style.display = "block";
-
- }, 1500);
- setTimeout(function () {
-   smoke.style.display = "none";
- }, 2700);
-  setTimeout(function () {
-    image.style.display = "none";
-  }, 3000);
+    }, 500);
 }
 
+
+var checkJump = setInterval(function() {
+    var characterTop = parseInt(
+      window.getComputedStyle(character).getPropertyValue("top")
+    );
+    var blockTop = parseInt(
+      window.getComputedStyle(block).getPropertyValue("top")
+    );
+    console.log(characterTop);
+
+    if(blockTop >= 148 && characterTop == 150){
+        console.log(blockTop); 
+        alert("You Lose! Click to Jump.")
+        block.style.top = "0px";
+    }
+}, 10);
