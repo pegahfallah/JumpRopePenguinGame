@@ -1,30 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" onclick="jump()">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>JumpRope</title>
-  </head>
-  <body>
-    <div id="game">
-      <div id="character">
-        <img id="penguin" src="penguin.png" />
-      </div>
-      <div class="shadow"></div>
-      <div>
-        <div class="wrap">
-          <div class="handles">
-            <div class="handle-left"></div>
-            <div class="handle-right"></div>
-          </div>
-        </div>
-        <div class="rope"></div>
-        <!-- <img id="line" src="line.png" /> -->
-      </div>
-    </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
-    <div></div>
-  </body>
-  <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <img id="cottonball" src="ball.png"></img>
+    <div class="wrapper" >
+   
+                <ul id="smoke">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+                        
+        </ul>
+        
+        <div class="flame-wrapper">
+            <div class="flame red"></div>
+            <div class="flame orange"></div>
+            <div class="flame gold"></div>
+            <div class="flame white"></div>
+            <div class="base blue"></div>
+            <div class="base black"></div>
+        </div>
+    
+         <button id="burnButton" onclick="burn()">Click to Burn</button>
+    </div>
+   
+</body>
+<script src="script.js"></script>
+
 </html>
